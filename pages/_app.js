@@ -1,7 +1,9 @@
 import { createGlobalStyle } from "styled-components";
 
-import { variables } from '../const'
-import fonts from '../utils/fonts';
+import { DeviceProvider, CmsProvider } from '../contexts'
+
+import { variables } from "../const";
+import fonts from "../utils/fonts";
 
 const GlobalStyle = createGlobalStyle`
   html {
@@ -31,9 +33,11 @@ const GlobalStyle = createGlobalStyle`
 
 export default function App({ Component, pageProps }) {
   return (
-    <>
-      <GlobalStyle />
-      <Component {...pageProps} />
-    </>
+    <DeviceProvider>
+      <CmsProvider>
+        <GlobalStyle />
+        <Component {...pageProps} />
+      </CmsProvider>
+    </DeviceProvider>
   );
 }
