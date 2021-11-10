@@ -10,13 +10,12 @@ const sequence = {
 };
 
 const useAnimatedLoader = (wrapper, timeScale = 1) => {
- 
+  
   const [isLoaded, setAsLoaded] = useState(false);
   const [forceRefresh, setRefresh] = useState(false);
   const [animationEnded, setAnimationState] = useState(false);
 
   const [timeline, setTimeline] = useState(gsap.timeline());
-  
 
   useEffect(() => {
     if(!wrapper.current) return;
@@ -25,6 +24,7 @@ const useAnimatedLoader = (wrapper, timeScale = 1) => {
       setRefresh(false);
       return;
     }
+
     const tl = sceneBuilder();
         
     setTimeline(tl);
@@ -54,7 +54,7 @@ const useAnimatedLoader = (wrapper, timeScale = 1) => {
     const flamesLarge = rocketSvg.getElementById("flame-biggest");
     const flamesNormal = rocketSvg.getElementById("flame-normal");
     const flamesSmall = rocketSvg.getElementById("flame-smallest");
-    debugger;
+
     gsap.set([rocket], { autoAlpha: 0, y: 0 });
     gsap.set([flamesLarge, dust], { autoAlpha: 0 });
     gsap.set([flamesGroup], { transformOrigin: "100% 0%" });
