@@ -2,7 +2,7 @@ import Head from "next/head";
 import React, { useState, useEffect } from "react";
 import { LoaderModule, MainModule } from "../modules";
 
-import { StyledAppContainer, StyledMainModuleOverlay } from "./styled";
+import { StyledAppContainer, StyledMainModuleOverlay } from "../utils/indexStyled";
 import fonts from "../utils/fonts";
 
 const Home = () => {

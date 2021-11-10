@@ -12,4 +12,6 @@ const Form = forwardRef(({children, isMobile}, ref) => {
     )
 })
 
+Form.displayName = 'Form';
+
 export default Form;

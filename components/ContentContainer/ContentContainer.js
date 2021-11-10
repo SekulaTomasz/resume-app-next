@@ -22,4 +22,6 @@ const ContentContainer = forwardRef(({
   );
 });
 
+ContentContainer.displayName = 'ContentContainer';
+
 export default ContentContainer;

@@ -13,12 +13,7 @@ const Dialog = ({children, size = "50%", isVisible = true, toggle}) => {
     useEffect(() => {
         if(isVisible) setDisplay(true);
         return () => setDisplay(false);
-    }, [])
-
-    useEffect(() => {
-        if(isVisible) setDisplay(true);
-
-    }, [isVisible])
+    }, [,isVisible])
 
     if(!isVisible) return null;
 

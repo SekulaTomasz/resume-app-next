@@ -72,7 +72,7 @@ const SkillModule = () => {
           toggle={toggle}
         >
           <Dialog.Header>
-            <span>{skill_section.skills[selectedSkill].name}</span>
+            <span>{skill_section.skills[selectedSkill].title}</span>
             <StyledDividerContainer>
               <StyledDivider />
             </StyledDividerContainer>

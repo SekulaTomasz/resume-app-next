@@ -1,6 +1,6 @@
-import { useEffect } from "react/cjs/react.development";
+import { useEffect } from 'react';
 
-const useHideBodyScroll = (disable) => {
+const useHideBodyScroll = (disable = false) => {
     
     useEffect(() => {
         if(disable) document.body.style.overflow = 'hidden';
