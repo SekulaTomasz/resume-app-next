@@ -3,7 +3,7 @@ import { createGlobalStyle } from "styled-components";
 import { DeviceProvider, CmsProvider } from '../contexts'
 
 import { variables } from "../const";
-import fonts from "../utils/fonts";
+
 
 const GlobalStyle = createGlobalStyle`
   html {
@@ -28,7 +28,6 @@ const GlobalStyle = createGlobalStyle`
     background: ${variables.colors.details};
     border-radius: 0px;
   }
-  ${fonts}
 `;
 
 export default function App({ Component, pageProps }) {

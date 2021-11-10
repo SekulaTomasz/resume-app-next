@@ -3,7 +3,7 @@ import { StyledSVGWrapper } from "./styled";
 
 import useAnimatedMainSvg from "../../hooks/useAnimatedMainSvg";
 
-import { ReactComponent as TrianglesSvg } from "../../assets/svg/traingles.svg";
+import TrianglesSvg from "/public/assets/svg/traingles.svg";
 
 const AnimatedTriangles = () => {
   const trianglesRef = useRef(null);
@@ -11,8 +11,8 @@ const AnimatedTriangles = () => {
   useAnimatedMainSvg(trianglesRef);
 
   return (
-    <StyledSVGWrapper>
-      <TrianglesSvg style={{ height: "550px" }} ref={trianglesRef} />
+    <StyledSVGWrapper ref={trianglesRef}>
+      <TrianglesSvg style={{ height: "550px" }}  />
     </StyledSVGWrapper>
   );
 };

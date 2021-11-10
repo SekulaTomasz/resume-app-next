@@ -1,13 +1,13 @@
 import styled from "styled-components";
 
-import appearanceVariables from '../../configs/appearanceVariables.json';
+import { variables } from '../../const';
 
 const StyledSpanIcon = styled.span`
     display: block;
     position: absolute;
     height: 5px;
     width: 100%;
-    background: ${appearanceVariables.colors.primary};
+    background: ${variables.colors.primary};
     border-radius: 10px;
     opacity: 1;
     left: 0;

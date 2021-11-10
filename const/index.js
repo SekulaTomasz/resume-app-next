@@ -1,7 +1,7 @@
 import variables from './variables';
 import messages from './messages';
 import patterns from './patterns';
-import { containerPositionEnum,flexContainerPositionEnum } from './enums';
+import { containerPositionEnum,flexcontainerPositionEnum } from './enums';
 import { azureFunctionEndpoints,cmsEndpoints } from './api';
 
 export {
@@ -9,7 +9,7 @@ export {
     messages,
     patterns,
     containerPositionEnum,
-    flexContainerPositionEnum,
+    flexcontainerPositionEnum,
     azureFunctionEndpoints,
     cmsEndpoints
 }

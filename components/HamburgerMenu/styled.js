@@ -1,8 +1,8 @@
 import styled, { css } from "styled-components";
 
-import { ReactComponent as GithubLogo } from "../../assets/svg/github-logo.svg";
-import appearanceVariables from "../../configs/appearanceVariables.json";
-import {ReactComponent as TrianglesSvg} from '../../assets/svg/traingles-mini.svg';
+import GithubLogo from "/public/assets/svg/github-logo.svg";
+import { variables } from '../../const';
+import TrianglesSvg from '/public/assets/svg/traingles-mini.svg';
 
 const CursorShared = css`
   cursor: pointer;
@@ -14,7 +14,7 @@ const StyledMenuWrapper = styled.div`
   width: 100%;
   position: absolute;
   opacity: 0;
-  background-color: ${appearanceVariables.colors.secondary};
+  background-color: ${variables.colors.secondary};
 
 
   ${({ isOpen }) => {
@@ -67,7 +67,7 @@ const StyledMenuContentWrapper = styled.div`
 
 const StyledMenuOption = styled.span`
   margin: 2rem;
-  font-size: ${appearanceVariables.fontSizes.subHeader}px;
+  font-size: ${variables.fontSizes.subHeader}px;
   cursor: pointer;
   user-select: none;
   ${CursorShared}

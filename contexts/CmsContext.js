@@ -5,7 +5,7 @@ import { cmsEndpoints } from '../const';
 const CmsContext = React.createContext(null);
 
 const CmsProvider = ({ children }) => {
-  const { isLoaded, data, error, setForceRefresh } 
+  const { isLoaded, data } 
     = useFetchIntialData(cmsEndpoints.resumeById("1"));
 
   return <CmsContext.Provider value={{data, isLoaded: isLoaded}}>

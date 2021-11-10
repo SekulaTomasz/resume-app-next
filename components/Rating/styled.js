@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import appearanceVariables from '../../configs/appearanceVariables.json';
+import { variables } from '../../const';
 
 
 const StyledCircle = styled.div`
@@ -7,7 +7,7 @@ const StyledCircle = styled.div`
     height: 24px;
     border-radius:50%;
     margin: .3rem;
-    ${({isFilled}) => isFilled ? `background-color: ${appearanceVariables.colors.primary};`: `background-color: ${appearanceVariables.colors.details};`}
+    ${({isFilled}) => isFilled ? `background-color: ${variables.colors.primary};`: `background-color: ${variables.colors.details};`}
 `
 
 export {

@@ -1,15 +1,15 @@
 import styled from 'styled-components';
-import appearanceVariables from '../../configs/appearanceVariables.json';
+import { variables } from '../../const';
 
 const StyledHeader = styled.span`
-    color: ${({textColor}) => textColor ? textColor : appearanceVariables.colors.details};
-    font-size: ${appearanceVariables.fontSizes.headers}px;
+    color: ${({textColor}) => textColor ? textColor : variables.colors.details};
+    font-size: ${variables.fontSizes.headers}px;
     font-weight: bold;
     letter-spacing: 3px;
 `
 const StyledUnderline = styled.div`
     width:85%;
-    border: 1px solid ${({textUnderlineColor}) => textUnderlineColor ? textUnderlineColor : appearanceVariables.colors.primary};
+    border: 1px solid ${({textUnderlineColor}) => textUnderlineColor ? textUnderlineColor : variables.colors.primary};
     margin-top:1rem;
 `
 

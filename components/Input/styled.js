@@ -1,9 +1,9 @@
 import styled from "styled-components";
-import appearanceVariables from '../../configs/appearanceVariables.json';
+import { variables } from '../../const';
 
 
 const StyledInput = styled.input`
-    font-size: ${appearanceVariables.fontSizes.normal}px;
+    font-size: ${variables.fontSizes.normal}px;
     font-weight: 300;
     border-radius: 2px;
     margin: 0;
@@ -23,8 +23,8 @@ const StyledSpan = styled.span`
     font-weight: 600;
     margin: 0;
     position: absolute;
-    color: ${appearanceVariables.colors.secondary};
-    font-size: ${appearanceVariables.fontSizes.normal}px;
+    color: ${variables.colors.secondary};
+    font-size: ${variables.fontSizes.normal}px;
     
     top: 0px;
     left: 0;
@@ -36,7 +36,7 @@ const StyledSpan = styled.span`
     ${StyledInput}:focus + &,
     ${StyledInput}:valid + &  {
 		top: 0;
-        font-size: ${appearanceVariables.fontSizes.small}px;
+        font-size: ${variables.fontSizes.small}px;
 	}
 `
 const StyledWrapper = styled.div`
@@ -49,7 +49,7 @@ const StyledWrapper = styled.div`
 `
 const StyledInputBorder = styled.div`
     width: 25%;
-    border-top: 1px solid ${appearanceVariables.colors.secondary};
+    border-top: 1px solid ${variables.colors.secondary};
     align-self: start;
     left: 0;
     margin: 0;

@@ -1,5 +1,5 @@
 import React from "react";
-import { FlexContainerPositionEnum } from "../../const/index";
+import { flexcontainerPositionEnum } from "../../const/index";
 
 import { StyledContainer } from "./styled";
 
@@ -7,7 +7,7 @@ const FlexContainer = ({
   children,
   isColumnDirection,
   additionalStyle,
-  position = FlexContainerPositionEnum.left,
+  position = flexcontainerPositionEnum.left,
   onClick,
 }) => {
   return (

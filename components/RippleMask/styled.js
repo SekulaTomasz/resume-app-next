@@ -1,10 +1,10 @@
 import styled, { css } from "styled-components";
-import appearanceVariables from '../../configs/appearanceVariables.json';
-import { ReactComponent as MailSent } from '../../assets/svg/email_sent.svg';
+import { variables } from '../../const';
+import MailSent from '/public/assets/svg/email_sent.svg';
 
 const Shared = css`
     z-index: 1102;
-    background-color: ${appearanceVariables.colors.secondary};
+    background-color: ${variables.colors.secondary};
     position: absolute;
 `
 

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import appearanceVariables from '../../configs/appearanceVariables.json';
+import { variables } from '../../const';
 
 
 const StyledButton = styled.a`
@@ -10,7 +10,7 @@ const StyledButton = styled.a`
   padding: 10px 25px;
   border: none;
   color: ${({textColor}) => textColor};
-  font-size: ${appearanceVariables.fontSizes.small}px;
+  font-size: ${variables.fontSizes.small}px;
   font-weight: 600;
   position: relative;
   background: none;

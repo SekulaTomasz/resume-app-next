@@ -22,8 +22,6 @@ const Dialog = ({children, size = "50%", isVisible = true, toggle}) => {
 
     if(!isVisible) return null;
 
-    console.log(displayData);
-
     return (
         <StyledDialogWrapper size={size} onClick={() => {
             if(isVisible) setDisplay(false);

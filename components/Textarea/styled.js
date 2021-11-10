@@ -1,10 +1,10 @@
 import styled from "styled-components";
 
-import appearanceVariables from '../../configs/appearanceVariables.json';
+import { variables } from '../../const';
 
 
 const StyledTextarea = styled.textarea`
-    font-size: ${appearanceVariables.fontSizes.normal}px;
+    font-size: ${variables.fontSizes.normal}px;
     font-weight: 300;
     border-radius: 2px;
     margin: 0;
@@ -21,7 +21,7 @@ const StyledTextarea = styled.textarea`
     :focus,
     :valid {
         outline: 0;
-        margin-top:${appearanceVariables.fontSizes.normal}px;
+        margin-top:${variables.fontSizes.normal}px;
         height: 250px;
     }
 ` 
@@ -29,8 +29,8 @@ const StyledSpan = styled.span`
     font-weight: 600;
     margin: 0;
     position: absolute;
-    color: ${appearanceVariables.colors.secondary};
-    font-size: ${appearanceVariables.fontSizes.normal}px;
+    color: ${variables.colors.secondary};
+    font-size: ${variables.fontSizes.normal}px;
     top: 30px;
     left: 0;
     z-index: 1;
@@ -41,7 +41,7 @@ const StyledSpan = styled.span`
     ${StyledTextarea}:focus + &,
     ${StyledTextarea}:valid + &  {
 		top: 0px;
-        font-size: ${appearanceVariables.fontSizes.small}px;
+        font-size: ${variables.fontSizes.small}px;
 	}
 `
 const StyledWrapper = styled.div`
@@ -54,7 +54,7 @@ const StyledWrapper = styled.div`
 `
 const StyledInputBorder = styled.div`
     width: 25%;
-    border-top: 1px solid ${appearanceVariables.colors.secondary};
+    border-top: 1px solid ${variables.colors.secondary};
     align-self: start;
     left: 0;
     margin: 0;

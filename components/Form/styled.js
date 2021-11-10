@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import appearanceVariables from '../../configs/appearanceVariables.json';
+import { variables } from '../../const';
 
 const StyledFormWrapper = styled.div`
     display: flex;    
@@ -10,7 +10,7 @@ const StyledFormWrapper = styled.div`
 
 const StyledMainFormContainer = styled.div`
     padding: 2rem;
-    background-color: ${appearanceVariables.colors.details};
+    background-color: ${variables.colors.details};
     border-radius: 10px;
 `
 

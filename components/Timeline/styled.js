@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import appearanceVariables from "../../configs/appearanceVariables.json";
+import { variables } from '../../const';
 
 
 const StyledCenterElement = styled.div`
@@ -15,7 +15,7 @@ const StyledHeader = styled.span`
   align-items: center;
   justify-self: end;
   display: flex;
-  font-size: ${appearanceVariables.fontSizes.normal}px;
+  font-size: ${variables.fontSizes.normal}px;
 `;
 
 const StyledTimelineDivider = styled.div`
@@ -27,7 +27,7 @@ const StyledSubHeader = styled.span`
   align-items: center;
   justify-self: end;
   display: flex;
-  font-size: ${appearanceVariables.fontSizes.normal}px;
+  font-size: ${variables.fontSizes.normal}px;
 
   ${({ isLeft, isRight }) => {
     const style = isLeft ? `justify-content: end;` : "";
@@ -38,8 +38,8 @@ const StyledSubHeader = styled.span`
         position: absolute;
         width: 12px;
         height: 12px;
-        border: 2px solid ${appearanceVariables.colors.details};
-        background-color: ${appearanceVariables.colors.secondary};
+        border: 2px solid ${variables.colors.details};
+        background-color: ${variables.colors.secondary};
         border-radius: 100%;
         z-index: 5;
         ${isLeft ? "right: calc(-2rem - 13px);" : ""}
@@ -88,8 +88,8 @@ const StyledTimelineElement = styled.div`
           position: absolute;
           width: 24px;
           height: 24px;
-          border: 2px solid ${appearanceVariables.colors.details};
-          background-color: ${appearanceVariables.colors.secondary};
+          border: 2px solid ${variables.colors.details};
+          background-color: ${variables.colors.secondary};
           border-radius: 100%;
           z-index: 5;
           ${isLeft ? "right: calc(-2rem - 19px);" : ""}

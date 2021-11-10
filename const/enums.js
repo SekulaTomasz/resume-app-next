@@ -3,7 +3,7 @@ const containerPositionEnum = {
     right: 'right',
 }
 
-const flexContainerPositionEnum = {
+const flexcontainerPositionEnum = {
     left: 'flex-start',
     right: 'flex-end',
     center: 'center'
@@ -12,5 +12,5 @@ const flexContainerPositionEnum = {
 
 export {
     containerPositionEnum,
-    flexContainerPositionEnum
+    flexcontainerPositionEnum
 }

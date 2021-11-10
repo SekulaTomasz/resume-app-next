@@ -1,6 +1,6 @@
 import styled, { keyframes }  from "styled-components";
 
-import appearanceVariables from '../../configs/appearanceVariables.json';
+import { variables } from '../../const';
 
 const StyledText = styled.span`
   text-transform : uppercase;
@@ -19,7 +19,7 @@ const StyledCursor = styled.span`
   font-weight: 100;
   padding-left: 2px;
   animation: ${blink} 1s step-end infinite;
-  color: ${appearanceVariables.colors.primary};
+  color: ${variables.colors.primary};
 `;
 
 const StyledWrapper = styled.div`

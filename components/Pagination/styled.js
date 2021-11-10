@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import appearanceVariables from '../../configs/appearanceVariables.json';
+import { variables } from '../../const';
 
 const StyledWrapper = styled.div`
     min-width: 15%;
@@ -12,13 +12,13 @@ const StyledPageCircle = styled.div`
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    border: 3px solid ${appearanceVariables.colors.primary};
+    border: 3px solid ${variables.colors.primary};
     cursor: pointer;
 
     
     ${({isActive}) => {
-        let styles = `background-color: ${appearanceVariables.colors.secondary};`;
-        if(isActive) styles = `transform: scale(1.2); background-color: ${appearanceVariables.colors.primary};`
+        let styles = `background-color: ${variables.colors.secondary};`;
+        if(isActive) styles = `transform: scale(1.2); background-color: ${variables.colors.primary};`
         return styles;
     }}
 
@@ -26,12 +26,12 @@ const StyledPageCircle = styled.div`
 
     &:hover  {
         transform: scale(1.2);
-        border: 3px solid ${appearanceVariables.colors.primary};
+        border: 3px solid ${variables.colors.primary};
     }
 
 `
 const StyledLine = styled.div`
-    border: 2px solid ${appearanceVariables.colors.details};
+    border: 2px solid ${variables.colors.details};
     height: 10%;
     max-height: 100px;
 `

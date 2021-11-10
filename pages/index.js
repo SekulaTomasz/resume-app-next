@@ -1,19 +1,19 @@
-import Head from 'next/head';
-import React, { useState,useEffect } from "react";
-import LoaderModule from '../modules/LoaderModule';
+import Head from "next/head";
+import React, { useState, useEffect } from "react";
+import { LoaderModule, MainModule } from "../modules";
 
-import { StyledAppContainer, StyledMainModuleOverlay } from './styled';
+import { StyledAppContainer, StyledMainModuleOverlay } from "./styled";
+import fonts from "../utils/fonts";
 
 const Home = () => {
-
   const [appIsReady, setAplicationReady] = useState(false);
 
   const [overlayState, toggleOverlay] = useState(false);
 
   useEffect(() => {
-    if(appIsReady) toggleOverlay(true);
+    if (appIsReady) toggleOverlay(true);
     return () => toggleOverlay(false);
-  },[,appIsReady])
+  }, [, appIsReady]);
 
   return (
     <div>
@@ -22,13 +22,22 @@ const Home = () => {
         <link rel="icon" href="/favicon.ico" />
         <link rel="manifest" href="/manifest.json" />
         <link rel="apple-touch-icon" href="/logo192.png" />
+        <style>
+            {fonts}
+        </style>
       </Head>
-        <StyledAppContainer>
-          <LoaderModule setAppAsReady={setAplicationReady}/>
-        </StyledAppContainer>
+      <StyledAppContainer>
+        {appIsReady ? (
+          <>
+            <StyledMainModuleOverlay toggleOverlay={overlayState} />
+            <MainModule />
+          </>
+        ) : (
+          <LoaderModule setAppAsReady={setAplicationReady} />
+        )}
+      </StyledAppContainer>
     </div>
-  )
-}
-
+  );
+};
 
 export default Home;

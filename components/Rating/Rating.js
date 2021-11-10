@@ -1,7 +1,7 @@
 import React from 'react';
 import FlexContainer from '../FlexContainer';
 
-import { FlexContainerPositionEnum } from '../../const';
+import { flexcontainerPositionEnum } from '../../const';
 import { StyledCircle } from './styled';
 
 const Rating = ({filled}) => {
@@ -15,7 +15,7 @@ const Rating = ({filled}) => {
     }
 
     return (
-        <FlexContainer position={FlexContainerPositionEnum.right}>
+        <FlexContainer position={flexcontainerPositionEnum.right}>
             {arr().map((isFilled,index) => <StyledCircle isFilled={isFilled} key={index}/>)}
         </FlexContainer>
     )

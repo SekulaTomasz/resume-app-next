@@ -1,23 +1,23 @@
 import React, { forwardRef } from "react";
-import { ContainerPositionEnum } from "../../const/index";
+import { containerPositionEnum } from "../../const/index";
 import Pagination from "../Pagination";
 import { StyledWrapper, StyleContainer } from "./styled";
 
 const ContentContainer = forwardRef(({
   children,
   additionalStyles,
-  position = ContainerPositionEnum.right,
+  position = containerPositionEnum.right,
   identity,
   backgroundColor,
   isMobile
 }, ref) => {
   return (
     <StyledWrapper position={position} additionalStyles={additionalStyles} id={identity} ref={ref}>
-      {!isMobile && position === ContainerPositionEnum.left ? <Pagination /> : null}
+      {!isMobile && position === containerPositionEnum.left ? <Pagination /> : null}
       <StyleContainer backgroundColor={backgroundColor} isMobile={isMobile}>
         {children}
       </StyleContainer>
-      {!isMobile && position === ContainerPositionEnum.right ? <Pagination /> : null}
+      {!isMobile && position === containerPositionEnum.right ? <Pagination /> : null}
     </StyledWrapper>
   );
 });

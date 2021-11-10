@@ -1,11 +1,11 @@
 import styled from 'styled-components';
 
-import appearanceVariables from '../../configs/appearanceVariables.json';
+import { variables } from '../../const';
 
 const StyledCardWrapper = styled.div`
     border-radius: 10px;
     ${({additionalStyle}) => additionalStyle}
-    background-color: ${appearanceVariables.colors.details};
+    background-color: ${variables.colors.details};
 `
 
 const StyledCardBody = styled.div`
@@ -17,8 +17,8 @@ const StyledCardBody = styled.div`
 `
 
 const StyledCardFooter = styled.div`
-    font-size: ${appearanceVariables.fontSizes.normal}px;
-    color: ${appearanceVariables.colors.secondary};
+    font-size: ${variables.fontSizes.normal}px;
+    color: ${variables.colors.secondary};
     font-weight: 500;
     display: flex;
     align-items:center;
