@@ -2,8 +2,7 @@ import { createGlobalStyle } from "styled-components";
 
 import { DeviceProvider, CmsProvider } from '../contexts'
 
-import { variables } from "../const";
-
+import { variables, cmsEndpoints } from "../const";
 
 const GlobalStyle = createGlobalStyle`
   html {
@@ -30,13 +29,26 @@ const GlobalStyle = createGlobalStyle`
   }
 `;
 
-export default function App({ Component, pageProps }) {
+export default function App({ Component, pageProps, data }) {
   return (
     <DeviceProvider>
-      <CmsProvider>
+      <CmsProvider initialData={data}>
         <GlobalStyle />
         <Component {...pageProps} />
       </CmsProvider>
     </DeviceProvider>
   );
+}
+
+App.getInitialProps = async (ctx) => {
+
+  const path = `${process.env.NEXT_PUBLIC_STRAPI_API_BASE_URL}${cmsEndpoints.resumeById("1")}`;
+  const headers = {
+    "Content-Type": "application/json",
+    "Authorization": `Bearer ${process.env.NEXT_PUBLIC_STRAPI_API_KEY}`,
+  }
+
+  const res = await fetch(path, { headers: headers })
+  const json = await res.json();
+  return { data: json }
 }

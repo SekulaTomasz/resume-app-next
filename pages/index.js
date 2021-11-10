@@ -16,7 +16,7 @@ const Home = () => {
   }, [, appIsReady]);
 
   return (
-    <div>
+    <>
       <Head>
         <title>sekula dev</title>
         <link rel="icon" href="/favicon.ico" />
@@ -36,7 +36,7 @@ const Home = () => {
           <LoaderModule setAppAsReady={setAplicationReady} />
         )}
       </StyledAppContainer>
-    </div>
+    </>
   );
 };
 
