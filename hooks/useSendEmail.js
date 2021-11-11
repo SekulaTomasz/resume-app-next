@@ -18,8 +18,8 @@ const useSendEmail = (formRef) => {
 
   const sendEmail = async (formValues) => {
 
-    const baseUrl = process.env.NEXT_PUBLIC_AZURE_FUNCTION_AUTH_KEY;
-    const authKey = process.env.NEXT_PUBLIC_AZURE_FUNCTION_BASE_URL;
+    const authKey = process.env.NEXT_PUBLIC_AZURE_FUNCTION_AUTH_KEY;
+    const baseUrl = process.env.NEXT_PUBLIC_AZURE_FUNCTION_BASE_URL;
 
     const path = `${baseUrl}${azureFunctionEndpoints.sendEmail}?code=${authKey}`;
 

@@ -2,7 +2,7 @@ import React, { useRef, useContext, useEffect } from "react";
 import useAnimatedLoader from "../../hooks/useAnimatedLoader";
 import { CmsContext } from '../../contexts';
 
-import { StyledSVGWrapper, StyledLoaderWrapper,StyledRocket } from './styled';
+import { StyledSVGWrapper, StyledLoaderWrapper, StyledRocket } from './styled';
 
 const LoaderModule = ({ setAppAsReady }) => {
 

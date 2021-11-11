@@ -54,11 +54,11 @@ const useAnimatedLoader = (wrapper, timeScale = 1) => {
     const flamesLarge = rocketSvg.getElementById("flame-biggest");
     const flamesNormal = rocketSvg.getElementById("flame-normal");
     const flamesSmall = rocketSvg.getElementById("flame-smallest");
-
+    
     gsap.set([rocket], { autoAlpha: 0, y: 0 });
     gsap.set([flamesLarge, dust], { autoAlpha: 0 });
     gsap.set([flamesGroup], { transformOrigin: "100% 0%" });
-
+    gsap.set([rocketSvg], {autoAlpha: 1})
 
     //timeline display objects
     const firstSceneBuilder = () => {

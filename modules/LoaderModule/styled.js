@@ -19,6 +19,7 @@ const StyledLoaderWrapper = styled.div`
 
 const StyledRocket = styled(Rocket)`
     height: 100%;
+    visibility:hidden;
 `
 
 export {
