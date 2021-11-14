@@ -54,6 +54,7 @@ const SkillModule = () => {
               isColumnDirection
               onClick={() => onSkillClickHandler(index)}
               key={title}
+              additionalStyle={"align-items: center;"}
             >
               <Rating filled={rating} />
               <Text value={title} size={24} />
@@ -67,7 +68,7 @@ const SkillModule = () => {
           </StyledTrainglesWrapper>
         )}
         <Dialog
-          size={isMobile ? "90%" : "50%"}
+          size={isMobile ? "85%" : "50%"}
           isVisible={state}
           toggle={toggle}
         >

@@ -25,7 +25,7 @@ const StyledSkillsWrapper = styled.div`
     row-gap: 1rem;
 
     ${({isMobile}) => {
-        if(isMobile) return `grid-template-columns: .5fr .5fr; grid-auto-flow: row;`;
+        if(isMobile) return `grid-template-columns: 1fr; grid-auto-flow: row;`;
         return `grid-template-columns: .5fr .5fr .5fr .5fr; grid-auto-flow: column; padding: 2rem;`
     }}
 
