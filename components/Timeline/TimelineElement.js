@@ -9,11 +9,11 @@ import {
   StyledHeaderWrapper,
 } from "./styled";
 
-const TimelineElement = ({ experience, position }) => {
+const TimelineElement = ({ experience, position,isMobile }) => {
   if (position === "left")
     return (
       <>
-        <StyledTimelineElement key={experience.companyName} isLeft>
+        <StyledTimelineElement key={experience.companyName} isLeft isMobile>
           <StyledHeaderWrapper>
             <StyledHeader>{experience.companyName}</StyledHeader>
             <StyledItalic>{experience.dateSubHeader}</StyledItalic>
@@ -21,7 +21,7 @@ const TimelineElement = ({ experience, position }) => {
 
           {experience.positions.map(({ position, duties }, index) => (
             <React.Fragment key={index}>
-              <StyledSubHeader isLeft>{position}</StyledSubHeader>
+              <StyledSubHeader isLeft isMobile>{position}</StyledSubHeader>
               <StyledContent>{duties}</StyledContent>
             </React.Fragment>
           ))}
@@ -33,14 +33,14 @@ const TimelineElement = ({ experience, position }) => {
   return (
     <>
       <StyledTimelineElement isLeft></StyledTimelineElement>
-      <StyledTimelineElement key={experience.companyName} isRight>
+      <StyledTimelineElement key={experience.companyName} isRight isMobile>
         <StyledHeaderWrapper >
             <StyledHeader>{experience.companyName}</StyledHeader>
             <StyledItalic>{experience.dateSubHeader}</StyledItalic>
           </StyledHeaderWrapper>
         {experience.positions.map(({ position, duties }, index) => (
           <React.Fragment key={index}>
-            <StyledSubHeader isRight>{position}</StyledSubHeader>
+            <StyledSubHeader isRight isMobile>{position}</StyledSubHeader>
             <StyledContent>{duties}</StyledContent>
           </React.Fragment>
         ))}

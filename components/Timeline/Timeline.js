@@ -17,8 +17,9 @@ const Timeline = ({ isMobile, data }) => {
       {data.map((experience, index) => {
         return <TimelineElement
           experience={experience}
-          position={index % 2 === 0 ? "left" : "right"}
+          position={isMobile || index % 2 !== 0 ? "right" : "left"}
           key={index}
+          isMobile={isMobile}
         />
       })}
     </StyledTimelineWrapper>

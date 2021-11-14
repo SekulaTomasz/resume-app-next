@@ -9,7 +9,9 @@ const StyledCenterElement = styled.div`
   ${({ rowCount }) => (rowCount ? `grid-row-end:${rowCount + 1};` : ``)}
 `;
 
-const StyledContent = styled.div``;
+const StyledContent = styled.div`
+  margin-bottom: 1rem;
+`;
 
 const StyledHeader = styled.span`
   align-items: center;
@@ -29,7 +31,8 @@ const StyledSubHeader = styled.span`
   display: flex;
   font-size: ${variables.fontSizes.normal}px;
 
-  ${({ isLeft, isRight }) => {
+  ${({ isLeft, isRight, isMobile }) => {
+    const circlePositionGap = isMobile ? "8.5px" : "13px";
     const style = isLeft ? `justify-content: end;` : "";
     return `
       ${style}
@@ -42,8 +45,8 @@ const StyledSubHeader = styled.span`
         background-color: ${variables.colors.secondary};
         border-radius: 100%;
         z-index: 5;
-        ${isLeft ? "right: calc(-2rem - 13px);" : ""}
-        ${isRight ? "left: calc(-2rem - 13px);" : ""}`;
+        ${isLeft ? `right: calc(-2rem - ${circlePositionGap});` : ""}
+        ${isRight ? `left: calc(-2rem - ${circlePositionGap});` : ""}`;
   }}
 `;
 
@@ -78,8 +81,9 @@ const StyledTimelineElement = styled.div`
   }}
 
   ${StyledHeader} {
-    ${({ isLeft, isRight }) => {
+    ${({ isLeft, isRight, isMobile }) => {
 
+      const circlePositionGap = isMobile ? "15px" : "19px";
       const style = isLeft ? `justify-content: end;` : "";
       return `
       ${style}
@@ -92,8 +96,8 @@ const StyledTimelineElement = styled.div`
           background-color: ${variables.colors.secondary};
           border-radius: 100%;
           z-index: 5;
-          ${isLeft ? "right: calc(-2rem - 19px);" : ""}
-          ${isRight ? "left: calc(-2rem - 19px);" : ""}
+          ${isLeft ? `right: calc(-2rem - ${circlePositionGap});` : ""}
+          ${isRight ? `left: calc(-2rem - ${circlePositionGap});` : ""}
           `;
     }}
   }
@@ -102,15 +106,22 @@ const StyledTimelineElement = styled.div`
 
 const StyledTimelineWrapper = styled.div`
   display: inline-grid;
-  grid-template-columns: 1fr 10px 1fr;
+  
   grid-auto-flow: column;
   grid-column-gap: 2rem;
   grid-row-gap: 2rem;
   margin: 2rem;
-  width: calc(100% - 4rem);
+  width: calc(100% - 6rem);
 
   ${StyledTimelineElement} {
-    ${({isMobile}) => isMobile ? "width: 100%": ""}
+    ${({isMobile}) => {
+      let style = "";
+      if(isMobile) style = `width: 100%; grid-template-columns:10px 1fr;`;
+      else style = `grid-template-columns: 1fr 10px 1fr;`;
+
+      return style;
+
+    }}
   }
 `;
 
