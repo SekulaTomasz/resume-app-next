@@ -53,11 +53,11 @@ const MainModule = () => {
           ref={sectionRefs.hero}
           isMobile={deviceType.isMobile}
         >
-          <AnimatedTriangles />
+          <AnimatedTriangles isMobile={deviceType.isMobile}/>
           <div style={{ margin: "2rem" }}>
             <TypingText
               text={optionsToTyping}
-              fontSize={variables.fontSizes.headers}
+              fontSize={ deviceType.isMobile ? variables.fontSizes.subHeader : variables.fontSizes.headers}
             />
             <p style={{ fontSize: variables.fontSizes.normal + "px" }}>{data.users_permissions_user.biography}</p>
           </div>

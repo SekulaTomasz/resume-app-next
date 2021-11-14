@@ -4,6 +4,8 @@ import { variables } from '../../const';
 
 const StyledText = styled.span`
   text-transform : uppercase;
+  overflow-wrap: anywhere;
+  line-height: 80%;
 `
 
 const blink = keyframes`

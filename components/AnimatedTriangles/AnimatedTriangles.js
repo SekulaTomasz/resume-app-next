@@ -5,14 +5,14 @@ import useAnimatedMainSvg from "../../hooks/useAnimatedMainSvg";
 
 import TrianglesSvg from "/public/assets/svg/traingles.svg";
 
-const AnimatedTriangles = () => {
+const AnimatedTriangles = ({isMobile}) => {
   const trianglesRef = useRef(null);
 
   useAnimatedMainSvg(trianglesRef);
 
   return (
     <StyledSVGWrapper ref={trianglesRef}>
-      <TrianglesSvg style={{ height: "550px" }}  />
+      <TrianglesSvg style={{ height: !isMobile ? "550px" :  "450px"}}  />
     </StyledSVGWrapper>
   );
 };
