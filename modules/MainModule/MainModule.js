@@ -57,7 +57,7 @@ const MainModule = () => {
           <div style={{ margin: "2rem" }}>
             <TypingText
               text={optionsToTyping}
-              fontSize={ deviceType.isMobile ? variables.fontSizes.subHeader : variables.fontSizes.headers}
+              fontSize={ deviceType.isMobile ? variables.fontSizes.mobileHeaders : variables.fontSizes.headers}
             />
             <p style={{ fontSize: variables.fontSizes.normal + "px" }}>{data.users_permissions_user.biography}</p>
           </div>

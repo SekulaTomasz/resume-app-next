@@ -46,6 +46,7 @@ const SkillModule = () => {
           "justify-content: center; align-items: start; margin: 2rem; flex-direction:column;"
         }
         textUndeline
+        isMobile={isMobile}
       />
       <StyledSkillsWrapper isMobile={isMobile}>
         {skill_section.skills.map(

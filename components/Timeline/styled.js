@@ -32,7 +32,8 @@ const StyledSubHeader = styled.span`
   font-size: ${variables.fontSizes.normal}px;
 
   ${({ isLeft, isRight, isMobile }) => {
-    const circlePositionGap = isMobile ? "8.5px" : "13px";
+    
+    const circlePositionGap = isMobile ? "calc(-4rem - 8.5px);" : "calc(-2rem - 8.5px);";
     const style = isLeft ? `justify-content: end;` : "";
     return `
       ${style}
@@ -45,8 +46,8 @@ const StyledSubHeader = styled.span`
         background-color: ${variables.colors.secondary};
         border-radius: 100%;
         z-index: 5;
-        ${isLeft ? `right: calc(-2rem - ${circlePositionGap});` : ""}
-        ${isRight ? `left: calc(-2rem - ${circlePositionGap});` : ""}`;
+        ${isLeft ? `right: ${circlePositionGap}` : ""}
+        ${isRight ? `left: ${circlePositionGap}` : ""}`;
   }}
 `;
 
@@ -83,7 +84,7 @@ const StyledTimelineElement = styled.div`
   ${StyledHeader} {
     ${({ isLeft, isRight, isMobile }) => {
 
-      const circlePositionGap = isMobile ? "15px" : "19px";
+      const circlePositionGap = isMobile ? "calc(-4rem - 14.5px);" : "calc(-2rem - 14.5px);";
       const style = isLeft ? `justify-content: end;` : "";
       return `
       ${style}
@@ -96,8 +97,8 @@ const StyledTimelineElement = styled.div`
           background-color: ${variables.colors.secondary};
           border-radius: 100%;
           z-index: 5;
-          ${isLeft ? `right: calc(-2rem - ${circlePositionGap});` : ""}
-          ${isRight ? `left: calc(-2rem - ${circlePositionGap});` : ""}
+          ${isLeft ? `right:  ${circlePositionGap}` : ""}
+          ${isRight ? `left: ${circlePositionGap}` : ""}
           `;
     }}
   }

@@ -21,6 +21,7 @@ const ExperienceModule = () => {
           "justify-content: center; align-items: start; margin: 2rem; flex-direction:column;"
         }
         textUndeline
+        isMobile={isMobile}
       />
       <Timeline isMobile={isMobile} data={orderedData}/>
     </>

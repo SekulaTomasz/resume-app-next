@@ -65,6 +65,7 @@ const ContactModule = () => {
         textColor={variables.colors.secondary}
         textUndeline
         textUnderlineColor={variables.colors.secondary}
+        isMobile={isMobile}
       />
       <StyledContactModuleWrapper ref={wrapper} isMobile={isMobile}>
         <Form isMobile={isMobile} ref={formRef}>

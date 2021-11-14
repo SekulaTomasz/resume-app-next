@@ -9,11 +9,11 @@ import {
   StyledHeaderWrapper,
 } from "./styled";
 
-const TimelineElement = ({ experience, position,isMobile }) => {
+const TimelineElement = ({ experience, position, isMobile}) => {
   if (position === "left")
     return (
       <>
-        <StyledTimelineElement key={experience.companyName} isLeft isMobile>
+        <StyledTimelineElement key={experience.companyName} isLeft isMobile={isMobile}>
           <StyledHeaderWrapper>
             <StyledHeader>{experience.companyName}</StyledHeader>
             <StyledItalic>{experience.dateSubHeader}</StyledItalic>
@@ -21,26 +21,27 @@ const TimelineElement = ({ experience, position,isMobile }) => {
 
           {experience.positions.map(({ position, duties }, index) => (
             <React.Fragment key={index}>
-              <StyledSubHeader isLeft isMobile>{position}</StyledSubHeader>
+              <StyledSubHeader isLeft isMobile={isMobile}>{position}</StyledSubHeader>
               <StyledContent>{duties}</StyledContent>
             </React.Fragment>
           ))}
         </StyledTimelineElement>
-        <StyledTimelineElement isRight></StyledTimelineElement>
+        {isMobile ? null : <StyledTimelineElement isRight></StyledTimelineElement>}
+        
       </>
     );
 
   return (
     <>
-      <StyledTimelineElement isLeft></StyledTimelineElement>
-      <StyledTimelineElement key={experience.companyName} isRight isMobile>
+      {isMobile ? null : <StyledTimelineElement isLeft></StyledTimelineElement>}
+      <StyledTimelineElement key={experience.companyName} isRight isMobile={isMobile}>
         <StyledHeaderWrapper >
             <StyledHeader>{experience.companyName}</StyledHeader>
             <StyledItalic>{experience.dateSubHeader}</StyledItalic>
           </StyledHeaderWrapper>
         {experience.positions.map(({ position, duties }, index) => (
           <React.Fragment key={index}>
-            <StyledSubHeader isRight isMobile>{position}</StyledSubHeader>
+            <StyledSubHeader isRight isMobile={isMobile}>{position}</StyledSubHeader>
             <StyledContent>{duties}</StyledContent>
           </React.Fragment>
         ))}

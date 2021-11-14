@@ -15,7 +15,7 @@ import { useHideBodyScroll } from '../../hooks/index';
 import HamburgerIcon from "../HamburgerIcon";
 
 const HamburgerMenu = (props) => {
-  const { isOpen, toggle, setPageIndex } = props;
+  const { isOpen, toggle, setPageIndex,resumeData } = props;
 
   useHideBodyScroll(isOpen);
 
@@ -41,7 +41,13 @@ const HamburgerMenu = (props) => {
             })}         
           </StyledMenuContentWrapper>
           <StyledMenuFooter>
+          <a
+            href={`${resumeData.githubUrl}`}
+            target={"_blank"}
+            rel={"noreferrer"}
+          >
             <StyledGithubLogo />
+          </a>
           </StyledMenuFooter>
         </StyledMenuWrapper>
       ) : null}

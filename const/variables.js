@@ -7,6 +7,7 @@ export default {
     "fontSizes": {
         "normal": 26,
         "headers": 70,
+        "mobileHeaders": 55,
         "subHeader": 48,
         "small": 20,
         "tiny": 16

@@ -101,6 +101,7 @@ const HeaderModule = ({ hamburgerState = false, toggleHamburger }) => {
             setPageIndex={setPageIndex}
             currentPageIndex={currentPageIndex}
             options={options}
+            resumeData={data.resume_header}
           />
         </StyledHamburgerWrapper>
       )}
