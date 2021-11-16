@@ -10,7 +10,14 @@ const Home = () => {
 
   const [overlayState, toggleOverlay] = useState(false);
 
+  const setCustomHeight = () => {
+    let vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+  }
+
   useEffect(() => {
+    setCustomHeight();
+
     if (appIsReady) toggleOverlay(true);
     return () => toggleOverlay(false);
   }, [, appIsReady]);

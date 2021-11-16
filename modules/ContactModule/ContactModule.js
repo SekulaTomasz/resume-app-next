@@ -84,7 +84,7 @@ const ContactModule = () => {
           <Textarea
             label={data.resume_field.contact_form_translation.contentText}
             onFocus={() => setFormActive((prev) => !prev)}
-            name={"message"}
+            name={"text"}
           />
         </Form>
         <StyledButtonWrapper>

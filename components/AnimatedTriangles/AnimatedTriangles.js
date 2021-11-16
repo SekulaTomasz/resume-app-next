@@ -11,7 +11,7 @@ const AnimatedTriangles = ({isMobile}) => {
   useAnimatedMainSvg(trianglesRef);
 
   return (
-    <StyledSVGWrapper ref={trianglesRef}>
+    <StyledSVGWrapper ref={trianglesRef} isMobile={isMobile}>
       <TrianglesSvg style={{ height: !isMobile ? "550px" :  "450px"}}  />
     </StyledSVGWrapper>
   );

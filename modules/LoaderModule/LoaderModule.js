@@ -8,7 +8,7 @@ const LoaderModule = ({ setAppAsReady }) => {
 
   const wrapper = useRef(null);
 
-  const { animationEnded, setAsLoaded, setRefresh } = useAnimatedLoader(wrapper, 1.5);
+  const { animationEnded, setAsLoaded, setRefresh } = useAnimatedLoader(wrapper, 1.8);
 
   const { isLoaded } = useContext(CmsContext);
 

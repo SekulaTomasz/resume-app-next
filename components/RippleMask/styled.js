@@ -36,7 +36,7 @@ const StyledContentWrapper = styled.div`
 `
 
 const StyledMailSentSVG = styled(MailSent)`
-    margin: 2rem;
+    margin-left: 4.5rem;
 `
 
 const StyledRippleWrapper = styled.div``

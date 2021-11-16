@@ -22,6 +22,7 @@ const DeviceProvider = ({ children }) => {
   const isTvOrLargeScreen = () => width > variables.deviceWidthSizes.desktop;
 
   const [deviceType, setDeviceType] = useState({
+    isJustMobile: isMobile(),
     isMobile: isMobile() || isTablet() || isSmallScreen(),
     isDesktop: isDesktop(),
     isLargeScreen: isTvOrLargeScreen(),
@@ -29,6 +30,7 @@ const DeviceProvider = ({ children }) => {
 
   useEffect(() => {
     setDeviceType({
+      isJustMobile: isMobile(),
       isMobile: isMobile() || isTablet() || isSmallScreen(),
       isDesktop: isDesktop(),
       isLargeScreen: isTvOrLargeScreen(),

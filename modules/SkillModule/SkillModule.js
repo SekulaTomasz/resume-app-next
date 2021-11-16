@@ -59,7 +59,7 @@ const SkillModule = () => {
             >
               <Rating filled={rating} />
               <Text value={title} size={24} />
-              <Text value={position_level_type.title} size={20} fontWeight={200} />
+              <Text value={position_level_type.title} size={isMobile ? 16 : 20} fontWeight={200} />
             </FlexContainer>
           )
         )}

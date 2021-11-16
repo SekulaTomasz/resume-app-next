@@ -8,9 +8,18 @@ const CursorShared = css`
   cursor: pointer;
 `;
 
-const StyledMenuWrapper = styled.div`
-  min-height: 100vh;
+const StyledMenuOverlay = styled.div`
+  position:absolute;
+  top: 0;
   height: 100vh;
+  width: 100%;
+  background-color: ${variables.colors.secondary};
+`
+
+const StyledMenuWrapper = styled.div`
+  height: 100vh;
+
+  height: calc(var(--vh, 1vh) * 100);
   width: 100%;
   position: absolute;
   opacity: 0;
@@ -102,5 +111,6 @@ export {
   StyledMenuContentWrapper,
   StyledMenuFooter,
   StyledGithubLogo,
-  StyledTriangles
+  StyledTriangles,
+  StyledMenuOverlay
 };

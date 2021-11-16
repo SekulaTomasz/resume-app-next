@@ -5,7 +5,7 @@ import { variables } from '../../const';
 const StyledText = styled.span`
   text-transform : uppercase;
   overflow-wrap: anywhere;
-  line-height: 80%;
+  line-height: 90%;
 `
 
 const blink = keyframes`
@@ -25,8 +25,9 @@ const StyledCursor = styled.span`
 `;
 
 const StyledWrapper = styled.div`
-  width: 100%;
-  ${({fontSize}) => `min-height: ${Math.round(fontSize*1.22)}px;`}
+  overflow: hidden;
+  margin: 0 1rem 0 1rem;
+  ${({fontSize}) => `min-height: ${Math.round(fontSize*2)}px;`}
   ${StyledText} {
     ${({fontSize}) => `font-size:${fontSize}px;`}
   }

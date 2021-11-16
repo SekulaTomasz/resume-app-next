@@ -31,6 +31,7 @@ const StyleValidationResultListElements = styled.span`
     color: ${variables.colors.secondary};
     font-size: ${variables.fontSizes.tiny}px;
     font-weight: 600;
+    text-align: center;
 `
 
 export {

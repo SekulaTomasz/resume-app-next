@@ -5,7 +5,8 @@ import {
   StyledMenuOption,
   StyledMenuFooter,
   StyledGithubLogo,
-  StyledTriangles
+  StyledTriangles,
+  StyledMenuOverlay
 } from "./styled";
 
 
@@ -23,6 +24,8 @@ const HamburgerMenu = (props) => {
     <>
       <HamburgerIcon {...props} />
       {isOpen ? (
+        <>
+        <StyledMenuOverlay />
         <StyledMenuWrapper isOpen={isOpen}>
           <StyledMenuContentWrapper>
           <StyledTriangles />
@@ -50,6 +53,7 @@ const HamburgerMenu = (props) => {
           </a>
           </StyledMenuFooter>
         </StyledMenuWrapper>
+        </>
       ) : null}
     </>
   );
