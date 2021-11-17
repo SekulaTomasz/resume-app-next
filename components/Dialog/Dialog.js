@@ -18,11 +18,11 @@ const Dialog = ({children, size = "50%", isVisible = true, toggle}) => {
     if(!isVisible) return null;
 
     return (
-        <StyledDialogWrapper size={size} onClick={() => {
+        <StyledDialogWrapper size={size} isVisible={isVisible}>
+            <StyledDialogWrapperOverlay onClick={() => {
             if(isVisible) setDisplay(false);
             toggle();
-        }} isVisible={isVisible}>
-            <StyledDialogWrapperOverlay />
+        }} />
             <StyledMainDialogContainer displayData={displayData}>
                 <StyledDialogContainer>
                     {children}

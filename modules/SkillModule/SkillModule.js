@@ -1,4 +1,5 @@
 import React, { useContext, useState } from "react";
+import parse from 'html-react-parser'
 
 import {
   StyledTrainglesWrapper,
@@ -80,7 +81,7 @@ const SkillModule = () => {
             </StyledDividerContainer>
           </Dialog.Header>
           <Dialog.Body>
-            {skill_section.skills[selectedSkill].description}
+            {parse(skill_section.skills[selectedSkill].description)}
           </Dialog.Body>
         </Dialog>
       </StyledSkillsWrapper>

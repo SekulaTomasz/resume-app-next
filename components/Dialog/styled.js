@@ -3,17 +3,12 @@ import { variables } from '../../const';
 
 const SharedDialogStyles = css`
   color: ${variables.colors.secondary};
-  font-weight: 300;
 `;
 
 const StyledMainDialogContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  position: sticky;
-  top: 0;
-  height: 100vh;
+  position: fixed;
+  top: 30%;
+  width: 50%;
   visibility:hidden;
   opacity:0;
 
@@ -37,12 +32,17 @@ const StyledDialogContainer = styled.div`
   box-shadow: rgba(255, 195, 0, 0.8) 0px 3px 8px;
   border-radius: 10px;
   background-color: ${variables.colors.details};
-  padding: 1rem;
+  
 `;
 
 const StyledDialogBody = styled.div`
   ${SharedDialogStyles}
   min-height: 10rem;
+  font-size: ${variables.fontSizes.small}px;
+  font-weight: 300;
+  padding: 1rem;
+  overflow: scroll;
+  max-height: 23rem;
 `;
 
 const StyledDialogFooter = styled.div`
@@ -57,6 +57,7 @@ const StyledDialogHeader = styled.div`
   flex-direction: column;
   min-height: 5rem;
   font-size: ${variables.fontSizes.subHeader}px;
+  font-weight: 500;
 `;
 
 const StyledDialogWrapper = styled.div`

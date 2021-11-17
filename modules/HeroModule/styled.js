@@ -4,7 +4,7 @@ import { variables } from "../../const";
 
 const StyledHeroContainer = styled.div`
     display: grid;
-    grid-template-rows: 80% 20%;
+    grid-template-rows: 75% 25%;
     
 `
 

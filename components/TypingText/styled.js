@@ -27,18 +27,24 @@ const StyledCursor = styled.span`
 const StyledWrapper = styled.div`
   overflow: hidden;
   margin: 0 1rem 0 1rem;
-  ${({fontSize}) => `min-height: ${Math.round(fontSize*2)}px;`}
+  min-height: 160px;
+  display: flex;
+  align-items: center;
   ${StyledText} {
     ${({fontSize}) => `font-size:${fontSize}px;`}
   }
   ${StyledCursor} {
-    ${({fontSize}) => `font-size:${fontSize*1.5}px;`}
+    ${({fontSize}) => `font-size:${fontSize*1.2}px;`}
   }
 `
 
+const StyledPrefix = styled.span`
+  color: ${variables.colors.primary};
+`
 
 export {
     StyledCursor,
     StyledText,
-    StyledWrapper
+    StyledWrapper,
+    StyledPrefix
 }
