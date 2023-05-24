@@ -1,0 +1,56 @@
+{
+    "contact_section": {
+        "sectionName": ""
+    },
+    "resume_field": {
+        "contact_form_translation": {
+            "emailInputLabel": "",
+            "contentText": "",
+            "buttonText": ""
+        },
+        "main_section_translation": {
+            "downloadButtonText": "",
+            "title": ""
+        }
+    },
+    "experience_section": {
+        "sectionName": "",
+        "experiences": [
+            {
+                "order": 1,
+                "positions": [
+                    {
+                        "position": "",
+                        "duties": ""
+                    }
+                ]
+            }
+        ]
+    },
+    "skill_section": {
+        "sectionName": "",
+        "skills": [
+            {
+                "rating": 1,
+                "name": "",
+                "title": "",
+                "level": "",
+                "description": "",
+                "position_level_type": {
+                    "title": ""
+                }
+            }
+        ]
+    },
+    "resume_header": {
+        "title": "",
+        "githubUrl": ""
+    },
+    "users_permissions_user": {
+        "user_short_descriptions_types": [
+            {
+                "title": ""
+            }
+        ]
+    }
+}

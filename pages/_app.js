@@ -1,8 +1,8 @@
 import { createGlobalStyle } from "styled-components";
 
 import { DeviceProvider, CmsProvider } from '../contexts'
-
-import { variables, cmsEndpoints } from "../const";
+import { variables } from "../const";
+import { getLocalData } from '../utils/file';
 
 const GlobalStyle = createGlobalStyle`
   html {
@@ -41,14 +41,6 @@ export default function App({ Component, pageProps, data }) {
 }
 
 App.getInitialProps = async (ctx) => {
-
-  const path = `${process.env.NEXT_PUBLIC_STRAPI_API_BASE_URL}${cmsEndpoints.resumeById("1")}`;
-  const headers = {
-    "Content-Type": "application/json",
-    "Authorization": `Bearer ${process.env.NEXT_PUBLIC_STRAPI_API_KEY}`,
-  }
-
-  const res = await fetch(path, { headers: headers })
-  const json = await res.json();
-  return { data: json }
+  const data = await getLocalData('data.json');
+  return { data }
 }

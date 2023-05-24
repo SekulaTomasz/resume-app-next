@@ -1,6 +1,4 @@
-import React, { useEffect, useState } from "react";
-//import { useFetchIntialData } from "../hooks";
-import { cmsEndpoints } from '../const';
+import React, { useState } from "react";
 
 const CmsContext = React.createContext(null);
 

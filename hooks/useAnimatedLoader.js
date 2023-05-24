@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { gsap } from "gsap";
 
 const sequence = {
@@ -46,7 +46,7 @@ const useAnimatedLoader = (wrapper, timeScale = 1) => {
     });
   }, [isLoaded]);
 
-  const sceneBuilder = () => {
+  const sceneBuilder = useCallback(() => {
     const [ rocketSvg ] = wrapper.current.children;
     const rocket = rocketSvg.getElementById("rocket_without_dust");
     const dust = rocketSvg.getElementById("clouds");
@@ -196,7 +196,7 @@ const useAnimatedLoader = (wrapper, timeScale = 1) => {
 
     const result = fullSceneBuilder();
     return result;
-  };
+  }, [ wrapper, timeScale, timeline]);
 
   return { animationEnded, setAsLoaded, setRefresh };
 };
