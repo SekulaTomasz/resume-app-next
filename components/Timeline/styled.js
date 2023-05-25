@@ -18,6 +18,7 @@ const StyledHeader = styled.span`
   justify-self: end;
   display: flex;
   font-size: ${variables.fontSizes.normal}px;
+  color: ${variables.colors.primary};
 `;
 
 const StyledTimelineDivider = styled.div`
@@ -55,6 +56,7 @@ const StyledItalic = styled.span`
   margin-bottom: 1rem;
   font-style: italic;
   font-weight: 100;
+  color: ${variables.colors.primary};
 `;
 
 const StyledHeaderWrapper = styled.div`

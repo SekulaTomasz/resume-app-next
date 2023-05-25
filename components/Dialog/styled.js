@@ -32,7 +32,7 @@ const StyledDialogContainer = styled.div`
   box-shadow: rgba(255, 195, 0, 0.8) 0px 3px 8px;
   border-radius: 10px;
   background-color: ${variables.colors.details};
-  
+  padding: 1rem;
 `;
 
 const StyledDialogBody = styled.div`
@@ -69,7 +69,6 @@ const StyledDialogWrapper = styled.div`
   display: flex;
   justify-content: center;
   z-index: 101;
-
 
   ${StyledMainDialogContainer} {
     ${({ size }) => `width: ${size};`}

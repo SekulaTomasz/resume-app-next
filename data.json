@@ -1,56 +1,184 @@
 {
     "contact_section": {
-        "sectionName": ""
+        "sectionName": "contact"
     },
     "resume_field": {
         "contact_form_translation": {
-            "emailInputLabel": "",
-            "contentText": "",
-            "buttonText": ""
+            "emailInputLabel": "email",
+            "contentText": "text",
+            "buttonText": "send"
         },
         "main_section_translation": {
-            "downloadButtonText": "",
-            "title": ""
+            "downloadButtonText": "Download resume",
+            "title": "Home"
         }
     },
     "experience_section": {
-        "sectionName": "",
+        "sectionName": "experience",
         "experiences": [
             {
                 "order": 1,
                 "positions": [
                     {
-                        "position": "",
-                        "duties": ""
+                        "position": "Junior .NET Developer"
+                    },
+                    {
+                        "position": "Intern .NET Developer"
                     }
-                ]
+                ],
+                "companyName": "System4you Sp.z o.o",
+                "dateSubHeader": "2016 - 2018"
+            },
+            {
+                "order": 2,
+                "positions": [
+                    {
+                        "position": "Junior .NET Developer",
+                        "duties": "The range of my duties in this position involved creating and implementing workflow management systems and documents operating on the basis of workflow mechanisms. In addition, I created simple user interfaces using JavaScript and React framework. All of my tasks were completed on SharePoint platform."
+                    }
+                ],
+                "companyName": "Geotechnology Sp.z o.o. Sp.k",
+                "dateSubHeader": "2018 - 2019"
+            },
+            {
+                "order": 4,
+                "positions": [
+                    {
+                        "position": "Frontend Developer",
+                        "duties": "On current position I'm working as a frontend developer which is responsible for developing e-commerce platform. To my main duties is to develop our solution of new features and improving existing codebase. Usually I cooperate with design and QA teams in order to deliver better and more qualitative solutions. I also write some unit tests and E2E.\nPreviously I've been dealing with develop other mTab application 'mTab Analyze'. It was a big challenge for me because first code of Analyze was created around 10 years ago and it was written in Backbone.js. It was first time with that framework for me but I quickly introduced into it and could start to do new features and also fix existing bugs."
+                    }
+                ],
+                "companyName": "mTab Sp. z o.o",
+                "dateSubHeader": "2022 - currently"
+            },
+            {
+                "order": 3,
+                "positions": [
+                    {
+                        "position": "Mid .NET Developer with JavaScript",
+                        "duties": "My position mainly involved work in Dynamic CRM environment where I wrote custom plugins for server side jobs in .NET 4.6 and form scripts in TypeScript which are later compiled to pure JavaScript. I was also in charge of integration between the existing systems where with SOAP protocol we take and send data. The range of my other duties were to embraces customizing Dynamic CRM forms and view"
+                    },
+                    {
+                        "position": "Junior .NET Developer with JavaScript",
+                        "duties": "When I started my job my first tasks involved writing scripts in JavaScript in internal framework in the current project which started around one year before. The main goal fo it was to deliver customized functions of Dynamic CRM and SFA module. The tools applied by us were internal company JavaScript framework, Web Api wrote in C# and mobile app in Xamarin."
+                    }
+                ],
+                "companyName": "Intersys Group Sp. z o.o.",
+                "dateSubHeader": "2019 - 2022"
             }
         ]
     },
     "skill_section": {
-        "sectionName": "",
+        "sectionName": "skills",
         "skills": [
             {
-                "rating": 1,
-                "name": "",
-                "title": "",
-                "level": "",
+                "rating": 4,
+                "name": "JAVASCRIPT",
+                "title": "JAVASCRIPT",
+                "level": "advanced",
                 "description": "",
                 "position_level_type": {
-                    "title": ""
+                    "title": "advanced"
+                }
+            },
+            {
+                "rating": 3,
+                "name": ".NET",
+                "title": ".NET",
+                "level": "regular",
+                "description": "",
+                "position_level_type": {
+                    "title": "regular"
+                }
+            },
+            {
+                "rating": 3,
+                "name": "REACT",
+                "title": "REACT",
+                "level": "regular",
+                "description": "",
+                "position_level_type": {
+                    "title": "regular"
+                }
+            },
+            {
+                "rating": 3,
+                "name": "HTML",
+                "title": "HTML",
+                "level": "regular",
+                "description": "",
+                "position_level_type": {
+                    "title": "regular"
+                }
+            },
+            {
+                "rating": 2,
+                "name": "CSS",
+                "title": "CSS",
+                "level": "junior",
+                "description": "",
+                "position_level_type": {
+                    "title": "junior"
+                }
+            },
+            {
+                "rating": 3,
+                "name": "ENGLISH",
+                "title": "ENGLISH",
+                "level": "regular",
+                "description": "As on my team we communicate in Polish I am not fluent in English. Still, I find it easy to work with documentation in English. Additionally, while working on a given technology I easily grasp documentation in English on all technical levels. In order to improve..I have regular lessons with native speakers which help me make constant progress in my command of English.",
+                "position_level_type": {
+                    "title": "regular"
+                }
+            },
+            {
+                "rating": 3,
+                "name": "DYNAMIC CRM",
+                "title": "DYNAMIC CRM",
+                "level": "regular",
+                "description": "",
+                "position_level_type": {
+                    "title": "regular"
+                }
+            },
+            {
+                "rating": 3,
+                "name": "REST API",
+                "title": "REST API",
+                "level": "regular",
+                "description": "",
+                "position_level_type": {
+                    "title": "regular"
+                }
+            },
+            {
+                "rating": 3,
+                "name": "SQL",
+                "title": "SQL",
+                "level": "regular",
+                "description": "",
+                "position_level_type": {
+                    "title": "regular"
                 }
             }
         ]
     },
     "resume_header": {
-        "title": "",
-        "githubUrl": ""
+        "title": "Sekula Tomasz",
+        "githubUrl": "https://github.com/SekulaTomasz"
     },
     "users_permissions_user": {
         "user_short_descriptions_types": [
             {
-                "title": ""
+                "title": "Software developer"
+            },
+            {
+                "title": "React enthusiast"
+            },
+            {
+                "title": "A GREAT ADMIRER OF pretty designs"
             }
-        ]
+        ],
+        "biography": "By now, I have been working in Javascript, Typescript and .NET languages thats  allowed me to create cool apps for external clients and also for internal processes. I have some knowledge how to build web applications both from server and client side. Privately, I'm in love in React which in my opinion, is a great tool for build some web apps."
     }
 }

@@ -51,12 +51,11 @@ const SkillModule = () => {
       />
       <StyledSkillsWrapper isMobile={isMobile}>
         {skill_section.skills.map(
-          ({ rating, name, title, level, description, position_level_type }, index) => (
+          ({ rating, title, position_level_type }) => (
             <FlexContainer
               isColumnDirection
-              onClick={() => onSkillClickHandler(index)}
               key={title}
-              additionalStyle={"align-items: center;"}
+              additionalStyle={"align-items: center; cursor: default;"}
             >
               <Rating filled={rating} />
               <Text value={title} size={24} />

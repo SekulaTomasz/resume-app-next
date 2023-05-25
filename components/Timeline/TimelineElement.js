@@ -22,7 +22,7 @@ const TimelineElement = ({ experience, position, isMobile}) => {
           {experience.positions.map(({ position, duties }, index) => (
             <React.Fragment key={index}>
               <StyledSubHeader isLeft isMobile={isMobile}>{position}</StyledSubHeader>
-              <StyledContent>{duties}</StyledContent>
+              {duties?.split('\n').map((duty, index) => <StyledContent key={index} >{duty}</StyledContent>)}
             </React.Fragment>
           ))}
         </StyledTimelineElement>
@@ -42,7 +42,9 @@ const TimelineElement = ({ experience, position, isMobile}) => {
         {experience.positions.map(({ position, duties }, index) => (
           <React.Fragment key={index}>
             <StyledSubHeader isRight isMobile={isMobile}>{position}</StyledSubHeader>
-            <StyledContent>{duties}</StyledContent>
+            {duties?.split('\n').map((duty, index) => <StyledContent key={index} >{duty}</StyledContent>)}
+            
+            
           </React.Fragment>
         ))}
       </StyledTimelineElement>

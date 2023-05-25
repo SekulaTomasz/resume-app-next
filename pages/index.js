@@ -25,7 +25,7 @@ const Home = () => {
   return (
     <>
       <Head>
-        <title>sekula dev</title>
+        <title>DEVELAPP</title>
         <link rel="icon" href="/favicon.ico" />
         <link rel="manifest" href="/manifest.json" />
         <link rel="apple-touch-icon" href="/logo192.png" />
